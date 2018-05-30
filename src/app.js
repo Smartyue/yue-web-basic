@@ -6,7 +6,7 @@ const appConf=require('./configs/app.config');
 const routerConf=require('./configs/router.config');
 
 const app=new App();
-app.Middleware=appConf.middlewareConf;
+app.Middleware = appConf.globalMiddlewareConf;
 app.Body=appConf.bodyConf;
 app.Routes=routerConf;
 app.Service=appConf.serviceConf;
