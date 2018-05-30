@@ -13,8 +13,5 @@ module.exports = {
     serviceConf: {
         dir:'./src/service'
     },
-    middlewareConf:'./src/middleware',
-
-
-
-}
+    globalMiddlewareConf: './src/global_middlewares',  //全局中间键路径配置
+};

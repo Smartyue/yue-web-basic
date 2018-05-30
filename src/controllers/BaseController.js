@@ -1,7 +1,7 @@
 /**
  * Created by yuanjianxin on 2018/4/9.
  */
-module.exports=class BaseController{
+export default class BaseController {
 
     __before(ctx,next){
 

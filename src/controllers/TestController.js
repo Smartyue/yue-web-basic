@@ -2,8 +2,8 @@
  * Created by yuanjianxin on 2018/4/26.
  */
 import {Test} from "../annotation";
-const BaseController=require('./BaseController');
-module.exports=class TestController extends BaseController{
+import BaseController from "./BaseController";
+export default class TestController extends BaseController {
 
 
     @Test
@@ -13,6 +13,17 @@ module.exports=class TestController extends BaseController{
         ctx.result={
             code:200,
             message:'OK'
+        };
+
+        await next();
+    }
+
+    async test1(ctx, next) {
+        ctx.logger.info('==hello test1==');
+
+        ctx.result = {
+            code: 200,
+            message: 'OK'
         };
 
         await next();
